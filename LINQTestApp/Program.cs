@@ -53,12 +53,14 @@ namespace LINQTestApp
                        select user;
 
             var collection = new ListUser(list);
-            ShowCollection(collection.Users);            
+            ShowCollection(collection.Users);
+            var collection1 = list.ToList();
 
             array[1].Age = 20;
             array[1].Languages[1] = "russian";
             ShowCollection(collection.Users);
             ShowCollection(array);
+            ShowCollection(collection1);
         }
             static void ShowCollection(IEnumerable<User> collection)
         {
